@@ -45,7 +45,27 @@ const startRow = Math.floor(Math.random() * cells);
 const startColumn = Math.floor(Math.random() * cells);
 
 const stepThroughCell = (row, column) => {
-  
+ // if i have visted the cell at [row, column], then return 
+ if (grid[row][column]) {
+    return;
+  }
+
+  // Mark this cell as bring visited 
+  grid[row] [column] = true;
+
+  // Assemble randomly-ordered list of neighbors
+  const neighbors = [
+    [row - 1, column],
+    [row, column + 1],
+    [row + 1, column],
+    [row, column - 1]
+  ];
+  // For each neighbor...
+
+  // See if the neighbor is out of bounds
+
+  // if we have visted that neighbor, continue to the next neigbor
 };
 
-stepThroughCell(startRow, startColumn)
+stepThroughCell(startRow, startColumn);
+console.log(grid);
